@@ -1,7 +1,9 @@
+mod tweet;
+mod news_article;
 mod summary_utils;
-use summary_utils::Tweet;
+use summary_utils::Summary;
+use tweet::Tweet;
 
-use crate::summary_utils::Summary;
 fn main() {
     let tweet = Tweet {
         username: String::from("YemiTheDev"),
