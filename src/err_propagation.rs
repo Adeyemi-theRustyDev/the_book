@@ -1,5 +1,5 @@
 use std::fs::File;
-use std::io;
+use std::io::{self, Read};
 
 pub fn read_username(path: &str) -> Result<String, io::Error>{
     let f = File::open(path);
