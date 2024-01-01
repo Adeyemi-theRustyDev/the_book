@@ -18,6 +18,6 @@ pub fn read_username(path: &str) -> Result<String, io::Error>{
 pub fn read_uname(path: &str) -> Result<String, io::Error> {
     let mut s = String::new();
 
-    let mut f = File::open(path)?.read_to_string(&mut s)?;
+    let  _f = File::open(path)?.read_to_string(&mut s)?;
     Ok(s)
 }

@@ -1,13 +1,9 @@
-mod err_propagation;
+mod generic_struct;
 
-use err_propagation::{read_uname, read_username};
+use generic_struct::Point;
 fn main() {
-    let file_cnts = read_uname("./src/person.rs").unwrap();
-    let other_file_contents = read_username("./src/dictionary.rs").unwrap();
-
-    println!("**************************FILE CONTENT******************************");
-    println!("{}", file_cnts);
-    println!("**************************FILE CONTENT******************************");
-
+    let origin = Point { x: 0, y: 1 };
+    let char_origin  = Point { x: 'a', y: 'b' };
+    print!("X: {} Y: {}\n", origin.x(), origin.y());
+    print!("X: {}, Y: {}\n", char_origin.x, char_origin.y());
 }
-
