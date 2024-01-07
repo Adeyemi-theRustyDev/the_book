@@ -1,9 +1,12 @@
-mod generic_struct;
-
-use generic_struct::Point;
+mod summary_utils;
+use summary_utils::Tweet;
 fn main() {
-    let origin = Point { x: 0, y: 1 };
-    let char_origin  = Point { x: 'a', y: 'b' };
-    print!("X: {} Y: {}\n", origin.x(), origin.y());
-    print!("X: {}, Y: {}\n", char_origin.x, char_origin.y());
+    let tweet = Tweet {
+        username: String::from("YemiTheDev"),
+        content: String::from("C# is a nice programming language"),
+        reply: true,
+        retweet: true
+    };
+
+    println!("1 new tweet: {:?}", tweet.summarize());
 }
